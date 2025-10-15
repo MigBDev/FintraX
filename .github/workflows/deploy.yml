@@ -1,4 +1,4 @@
-name: 🚀 Deploy Fintrax to GitHub Pages
+name:  Deploy Fintrax to GitHub Pages
 
 on:
   push:
