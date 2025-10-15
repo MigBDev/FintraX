@@ -1,8 +1,11 @@
-name:  Deploy Fintrax to GitHub Pages
+name: Deploy Fintrax to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # Se ejecuta cada vez que haces push a main
+    branches: [ main ]
+
+permissions:
+  contents: write
 
 jobs:
   build:
