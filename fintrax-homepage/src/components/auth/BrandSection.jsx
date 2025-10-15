@@ -1,6 +1,6 @@
 import React from 'react';
 import botImage from '../../assets/botlogin.png'; // 👈 asegúrate de tener la imagen en /assets
-import logo from '../../assets/logo.png';   // 👈 logo FintraX en /assets
+import logo from '../../assets/logo.png';   // 👈 logo FintraX en /assets si o que
 
 const BrandSection = () => {
   return (
