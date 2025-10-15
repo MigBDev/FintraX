@@ -1,11 +1,11 @@
-name: Deploy Fintrax to GitHub Pages
+name: 🚀 Deploy Fintrax to GitHub Pages
 
 on:
   push:
     branches: [ main ]  # Se ejecuta cada vez que haces push a main
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,12 +19,14 @@ jobs:
 
       - name: 📦 Instalar dependencias
         run: npm ci
+        working-directory: ./fintrax-homepage
 
       - name: 🏗️ Construir la aplicación
         run: npm run build
+        working-directory: ./fintrax-homepage
 
       - name: 🚀 Desplegar en GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./fintrax-homepage/dist
