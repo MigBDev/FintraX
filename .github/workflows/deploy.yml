@@ -9,23 +9,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🧩 Clonar el repositorio
+      - name: Clonar el repositorio
         uses: actions/checkout@v4
 
-      - name: ⚙️ Configurar Node.js
+      - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: 📦 Instalar dependencias
+      - name: Instalar dependencias
         run: npm ci
         working-directory: ./fintrax-homepage
 
-      - name: 🏗️ Construir la aplicación
+      - name: Construir la aplicación
         run: npm run build
         working-directory: ./fintrax-homepage
 
-      - name: 🚀 Desplegar en GitHub Pages
+      - name: Desplegar en GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
