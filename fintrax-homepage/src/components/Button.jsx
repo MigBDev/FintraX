@@ -7,3 +7,4 @@ export default function Button({ text, variant = "primary", onClick }) {
     </button>
   );
 }
+// pequeño cambio para reactivar el deploy
