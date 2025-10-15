@@ -1,6 +1,6 @@
 import "../styles/HeroSection.css";
 import Button from "./Button";
-
+import botImage from "../assets/bothero.png";
 
 export default function Hero() {
   return (
@@ -15,7 +15,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-image">
-        <img src="/bot1.png" alt="Bot" />
+        <img src={botImage} alt="Bot de FintraX" />
       </div>
     </section>
   );
