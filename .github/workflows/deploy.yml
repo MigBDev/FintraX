@@ -1,0 +1,30 @@
+name: Deploy Fintrax to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]  # Se ejecuta cada vez que haces push a main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧩 Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 📦 Instalar dependencias
+        run: npm ci
+
+      - name: 🏗️ Construir la aplicación
+        run: npm run build
+
+      - name: 🚀 Desplegar en GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
