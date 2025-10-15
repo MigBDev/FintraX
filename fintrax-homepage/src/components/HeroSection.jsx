@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-text">
-        <h1>FintraX tu asistente financiero con IA</h1>
+        <h1>FintraX tu asistente financiero con IA.</h1>
         <p>“De la complejidad a la calma: tus finanzas más claras que nunca con Fintrax.”</p>
         <div className="hero-buttons">
           <Button text="Regístrate ahora" variant="primary" />
